@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>答案之书 | The Book of Answers | 答えの書</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Noto+Serif+SC:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="lang-switcher" id="langSwitcher">
+  <button class="lang-btn active" data-lang="zh" aria-label="中文">中文</button>
+  <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+  <button class="lang-btn" data-lang="ja" aria-label="日本語">日本語</button>
+</div>
+
+<div class="scene" id="scene">
+  <div class="book-stage">
+    <div class="book" id="book">
+
+      <!-- Back cover -->
+      <div class="back-cover"></div>
+
+      <!-- Page-stack edge — visible thickness when book is tilted -->
+      <div class="page-stack"></div>
+
+      <!-- Open page spread -->
+      <div class="spread" id="spreadEl">
+        <div class="page-left"></div>
+        <div class="page-right"></div>
+        <!-- Answer spans full spread -->
+        <div class="answer-wrapper" id="answerWrapper">
+          <div class="answer-ornament"></div>
+          <div class="answer-text" id="answerText"></div>
+        </div>
+
+        <!-- Particle container -->
+        <div class="particles" id="particles"></div>
+      </div>
+
+      <!-- Front cover — rotates open via 3D transform -->
+      <div class="front-cover" id="frontCover">
+        <!-- Cover board thickness edges -->
+        <div class="board-edge board-edge-top"></div>
+        <div class="board-edge board-edge-bottom"></div>
+        <div class="board-edge board-edge-right"></div>
+        <div class="cover-face cover-outside">
+
+          <!-- Gold corner protectors -->
+          <div class="corner corner-tl"><span class="corner-rivet"></span></div>
+          <div class="corner corner-tr"><span class="corner-rivet"></span></div>
+          <div class="corner corner-bl"><span class="corner-rivet"></span></div>
+          <div class="corner corner-br"><span class="corner-rivet"></span></div>
+
+          <!-- Central gold ornament -->
+          <div class="cover-ornament">
+            <div class="ornament-dot dot-top"></div>
+            <div class="ornament-dot dot-bottom"></div>
+            <div class="ornament-dot dot-left"></div>
+            <div class="ornament-dot dot-right"></div>
+          </div>
+
+          <h1 class="cover-title" id="coverTitle">答案之书</h1>
+          <p class="cover-subtitle" id="coverSubtitle">The Book of Answers</p>
+        </div>
+        <div class="cover-face cover-inside"></div>
+      </div>
+
+      <!-- Spine -->
+      <div class="spine"></div>
+
+    </div>
+  </div>
+</div>
+
+<p class="prompt" id="prompt">在心中默念你的问题，打开答案之书吧</p>
+<p class="click-hint" id="clickHint">点击任意处合上书本</p>
+
+<script src="app.js"></script>
+</body>
+</html>
